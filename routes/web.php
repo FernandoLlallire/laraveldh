@@ -17,6 +17,6 @@ Route::get('/', function () {
 Route::get('/actors', "ActorsController@index");
 Route::get('/actors/search', "ActorsController@search");
 // Route::post('/actors/result/{request}', "ActorsController@result");
-Route::post('/actors/result/', "ActorsController@result");
+Route::get('/actors/result/', "ActorsController@result");
 Route::get('/movies', "MoviesController@index");
 Route::get('/movies/{id}', "MoviesController@show");

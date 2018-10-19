@@ -21,7 +21,7 @@ class ActorsController extends Controller
     }
     public function result(Request $request){
       $queryString = $request->lastNameActor;
-      $results=Actor::where("last_name","LIKE","%$queryString%")->orwhere("first_name","LIKE","%$queryString%")->get();
+      $results = Actor::where("last_name","LIKE","%$queryString%")->orWhere("first_name","LIKE","%$queryString%")->get();
       return view("actors.result")->with(compact("results"));
     }
 

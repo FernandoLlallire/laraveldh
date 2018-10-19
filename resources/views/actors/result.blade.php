@@ -5,6 +5,9 @@
     <title>Resultado Busqueda</title>
   </head>
   <body>
-    <h1>{{$result->first_name." ".$result->last_name }}</h1>
+    {{-- <h1>{{$results->first_name." ".$results->last_name }}</h1> --}}
+    @foreach ($results as $value)
+      <h3>{{$value->first_name." ".$value->last_name}}</h3>
+    @endforeach
   </body>
 </html>
